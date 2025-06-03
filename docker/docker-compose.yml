@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root 
+    ports:
+      - "3307:3307"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - mynetwork
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672" 
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - mynetwork
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - mynetwork
+
+  mongodb:
+    networks:
+      - "mynetwork"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
+    image: mongo:latest
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: Keycloak
+    command: start-dev
+    environment:
+      - KC_HEALTH_ENABLED=true
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    volumes:
+      - ./.containers/identity:/opt/keycloak/data
+    ports:
+      - 18080:8080
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  rabbitmq_data:
+  redis_data:
+  

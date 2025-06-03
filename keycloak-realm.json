@@ -1,0 +1,31 @@
+[
+  {
+    "realm": "myrealm",
+    "enabled": true,
+    "users": [],
+    "clients": [
+      {
+        "clientId": "my-client",
+        "name": "My Client Application",
+        "secret": "your-client-secret",
+        "redirectUris": [],
+        "webOrigins": [],
+        "publicClient": false,
+        "bearerOnly": false,
+        "directAccessGrantsEnabled": false,
+        "implicitFlowEnabled": false,
+        "serviceAccountsEnabled": true,
+        "authorizationServicesEnabled": false,
+        "standardFlowEnabled": false,
+        "protocol": "openid-connect",
+        "attributes": {
+          "oauth2.client.secret.role": "true"
+        }
+      }
+    ],
+    "roles": {
+      "realm": [],
+      "client": {}
+    }
+  }
+]
