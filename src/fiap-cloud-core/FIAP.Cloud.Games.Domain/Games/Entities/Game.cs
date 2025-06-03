@@ -29,7 +29,7 @@ namespace FIAP.Cloud.Games.Domain.Games.Entities
 
         public void ChangePrice(decimal newPrice)
         {
-            if (newPrice < 0)
+            if (newPrice <= 0)
                 AddError(GameErrorFactory.GetGamePricingMustBeGreaterThanZero());
 
             Pricing = newPrice;
