@@ -7,6 +7,7 @@ using FIAP.Cloud.Games.Application.Libraries.Filters;
 using FIAP.Cloud.Games.Application.Libraries.Abstractions;
 using FIAP.Cloud.Games.Application.Libraries.Exceptions;
 using FIAP.Cloud.Games.Domain.Games.Exceptions;
+using FIAP.Cloud.Games.Application.Games.Mappers;
 
 namespace FIAP.Cloud.Games.Application.Libraries.Services
 {
@@ -27,22 +28,22 @@ namespace FIAP.Cloud.Games.Application.Libraries.Services
             if (library is null)
                 return DefaultErrorFactory.GetErrors<LibraryResponse>(LibraryErrorConst.LIBRARY_NOT_FOUND);
 
-            return new InternalResponse<LibraryResponse>(new LibraryResponse());
+            return new InternalResponse<LibraryResponse>(LibraryMapper.SetLibrary(library));
         }
 
-        public async Task<InternalResponse<LibraryCreateResponse>> CreateAsync(LibraryCreateRequest request)
+        public async Task<InternalResponse<LibraryResponse>> CreateAsync(LibraryCreateRequest request)
         {
             if (request is { UserId: null })
-                return DefaultErrorFactory.GetInvalidResource<LibraryCreateResponse>();
+                return DefaultErrorFactory.GetInvalidResource<LibraryResponse>();
 
-            var newGame = new Library(request.UserId.Value);
+            var newLibrary = new Library(request.UserId.Value);
 
-            var resultOfCreation = await repository.CreateAsync(newGame);
+            var resultOfCreation = await repository.CreateAsync(newLibrary);
 
             if (!resultOfCreation)
-                return DefaultErrorFactory.GetErrors<LibraryCreateResponse>(GameErrorConst.GAME_COULD_NOT_BE_CREATED);
+                return DefaultErrorFactory.GetErrors<LibraryResponse>(LibraryErrorConst.LIBRARY_COULD_NOT_BE_CREATED);
 
-            return new InternalResponse<LibraryCreateResponse>(new LibraryCreateResponse());
+            return new InternalResponse<LibraryResponse>(LibraryMapper.SetLibrary(newLibrary));
         }
     }
 }
