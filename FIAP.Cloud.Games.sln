@@ -74,9 +74,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.Cloud.Games.Identity.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.Tests", "src\fiap-cloud-core\FIAP.Cloud.Games.Tests\FIAP.Cloud.Games.Tests.csproj", "{630D1E22-8E92-4A9F-B9D8-AFA4CE40BCE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.AppHost", "FIAP.Cloud.Games.AppHost\FIAP.Cloud.Games.AppHost.csproj", "{ED2C634D-5171-474E-AA91-F4B44E2C0381}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.AppHost", "aspire\FIAP.Cloud.Games.AppHost\FIAP.Cloud.Games.AppHost.csproj", "{ED2C634D-5171-474E-AA91-F4B44E2C0381}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.ServiceDefaults", "FIAP.Cloud.Games.ServiceDefaults\FIAP.Cloud.Games.ServiceDefaults.csproj", "{5C5D55AE-CEBB-2CE6-DA8F-758D1D1ED6DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.ServiceDefaults", "aspire\FIAP.Cloud.Games.ServiceDefaults\FIAP.Cloud.Games.ServiceDefaults.csproj", "{5C5D55AE-CEBB-2CE6-DA8F-758D1D1ED6DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspire", "Aspire", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
