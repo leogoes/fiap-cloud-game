@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>8a1d44ed-24ce-47c0-9bbf-c88c964eb71f</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.0.0" />
+    <PackageReference Include="Aspire.Hosting.MongoDB" Version="9.3.1" />
+    <PackageReference Include="Aspire.Hosting.MySql" Version="9.3.1" />
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="9.3.1" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="9.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\fiap-cloud-core\FIAP.Cloud.Games.API\FIAP.Cloud.Games.API.csproj" />
+    <ProjectReference Include="..\src\fiap-cloud-identity\FIAP.Cloud.Games.Identity.API\FIAP.Cloud.Games.Identity.API.csproj" />
+  </ItemGroup>
+
+</Project>

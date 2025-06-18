@@ -13,6 +13,8 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 var configuration = new ConfigurationBuilder()
         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
         .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("DOTNET_ENVIROMENT")}.json", optional: true)
@@ -51,6 +53,8 @@ builder.Services.AddMasstransitConfiguration();
 ApplicationBootstraper.Bootstrap(builder.Services);
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())
 {

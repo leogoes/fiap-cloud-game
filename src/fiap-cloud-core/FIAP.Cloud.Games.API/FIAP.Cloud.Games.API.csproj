@@ -29,6 +29,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\..\FIAP.Cloud.Games.ServiceDefaults\FIAP.Cloud.Games.ServiceDefaults.csproj" />
 		<ProjectReference Include="..\..\fiap-cloud-shared\FIAP.Cloud.Games.Core\FIAP.Cloud.Games.Core.csproj" />
 		<ProjectReference Include="..\FIAP.Cloud.Games.Application\FIAP.Cloud.Games.Application.csproj" />
 		<ProjectReference Include="..\FIAP.Cloud.Games.Data\FIAP.Cloud.Games.Data.csproj" />

@@ -22,7 +22,7 @@ namespace FIAP.Cloud.Games.API.Endpoints.Libraries
                     return Results.NotFound(new Response404Error());
 
                 if (result.Error)
-                    return Results.BadRequest(new Response400Error<LibraryCreateResponse>(result));
+                    return Results.BadRequest(new Response400Error<LibraryResponse>(result));
 
                 return Results.Ok(result.Content);
             })

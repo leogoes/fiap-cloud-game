@@ -74,6 +74,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIAP.Cloud.Games.Identity.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.Tests", "src\fiap-cloud-core\FIAP.Cloud.Games.Tests\FIAP.Cloud.Games.Tests.csproj", "{630D1E22-8E92-4A9F-B9D8-AFA4CE40BCE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.AppHost", "FIAP.Cloud.Games.AppHost\FIAP.Cloud.Games.AppHost.csproj", "{ED2C634D-5171-474E-AA91-F4B44E2C0381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Cloud.Games.ServiceDefaults", "FIAP.Cloud.Games.ServiceDefaults\FIAP.Cloud.Games.ServiceDefaults.csproj", "{5C5D55AE-CEBB-2CE6-DA8F-758D1D1ED6DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -136,6 +140,14 @@ Global
 		{630D1E22-8E92-4A9F-B9D8-AFA4CE40BCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{630D1E22-8E92-4A9F-B9D8-AFA4CE40BCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{630D1E22-8E92-4A9F-B9D8-AFA4CE40BCE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED2C634D-5171-474E-AA91-F4B44E2C0381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2C634D-5171-474E-AA91-F4B44E2C0381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2C634D-5171-474E-AA91-F4B44E2C0381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2C634D-5171-474E-AA91-F4B44E2C0381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5D55AE-CEBB-2CE6-DA8F-758D1D1ED6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5D55AE-CEBB-2CE6-DA8F-758D1D1ED6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5D55AE-CEBB-2CE6-DA8F-758D1D1ED6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5D55AE-CEBB-2CE6-DA8F-758D1D1ED6DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
